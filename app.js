@@ -5,11 +5,11 @@ const express = require('express');
 const app = express();
 
 // Define el puerto en el que se va a ejecutar el servidor
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Configura una ruta de ejemplo
 app.get('/', (req, res) => {
-  res.send('¡Hola Mundo desde Express en el puerto 3000!');
+  res.send('¡Hola Mundo desde Express!');
 });
 
 app.get('/clientes', (req, res) => {
